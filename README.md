@@ -11,4 +11,12 @@ You should be able to connect w/ docker/docker as the user/passwd
 ' execute at shell: vagrant up
 ' After finish run: vagrant ssh --> to set your password
 ' It will boot you off the server so: vagrant ssh --> again
-' run: docker ps --> You should see all instances of postgres runninggGj
+' run: docker ps --> You should see all instances of postgres running
+' run: psql -h localhost -U postgres -c "SELECT * FROM master_get_active_worker_nodes();"
+node_name | node_port 
+-----------+-----------
+ localhost |      5434
+ localhost |      5436
+ localhost |      5433
+ localhost |      5435
+(4 rows)
