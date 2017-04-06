@@ -14,9 +14,9 @@ docker build -t postgrescitus .
       docker run -d -p 5434:5432 postgrescitus
       docker run -d -p 5435:5432 postgrescitus
       docker run -d -p 5436:5432 postgrescitus
-      # because Master is port forward to localhost 5432 from above
-     psql -h localhost -U postgres -c "SELECT * from master_add_node('localhost', 5433);"
-     psql -h localhost -U postgres -c "SELECT * from master_add_node('localhost', 5434);"
-     psql -h localhost -U postgres -c "SELECT * from master_add_node('localhost', 5435);"
-     psql -h localhost -U postgres -c "SELECT * from master_add_node('localhost', 5436);"
+      # because Master is port forward to 192.168.33.11 5432 from above
+     psql -h 192.168.33.11 -U postgres -c "SELECT * from master_add_node('192.168.33.11', 5433);"
+     psql -h 192.168.33.11 -U postgres -c "SELECT * from master_add_node('192.168.33.11', 5434);"
+     psql -h 192.168.33.11 -U postgres -c "SELECT * from master_add_node('192.168.33.11', 5435);"
+     psql -h 192.168.33.11 -U postgres -c "SELECT * from master_add_node('192.168.33.11', 5436);"
 
