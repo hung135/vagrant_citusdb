@@ -11,4 +11,4 @@ You should be able to connect w/ docker/docker as the user/passwd
 ' execute at shell: vagrant up
 ' After finish run: vagrant ssh --> to set your password
 ' It will boot you off the server so: vagrant ssh --> again
-' run: docker ps --> You should see all instances of postgres running
+' run: docker ps --> You should see all instances of postgres runninggGj
