@@ -107,8 +107,9 @@ sudo echo "force create mode = 0770">>/etc/samba/smb.conf
 
 sudo echo "locking = yes">>/etc/samba/smb.conf
 sudo service smbd restart 
-      
     SHELL
+     config.vm.provision "file", source: "Dockerfile", destination: "Dockerfile"
+     config.vm.provision "file", source: "pg_hba.conf", destination: "pg_hba.conf"
      config.vm.provision "shell", path: "install_docker.sh"
      config.vm.provision "shell", path: "install_rdbms.sh"
      config.vm.provision "shell", path: "install_webmin.sh"
