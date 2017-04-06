@@ -5,7 +5,7 @@ docker build -t postgrescitus .
       #https://docs.citusdata.com/en/v6.1/installation/production_deb.html
       curl https://install.citusdata.com/community/deb.sh | sudo bash
       # install locally sowe can have client tools 
-      sudo apt-get -y install postgresql-9.6-citus-6.1
+      sudo apt-get -y install postgresql-client-9.6 libpq5 pgdg-keyring postgresql-client-common
 
       # preload citus extension
       #sudo pg_conftool 9.6 main set shared_preload_libraries citus
