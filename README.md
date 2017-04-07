@@ -16,11 +16,11 @@
 -  localhost |      5433
 -  localhost |      5435
 - (4 rows)
-#OS
+# OS
 - IP: 192.168.33.11
 - user: ubuntu password: whatever you set
 
-#Postgres
+# Postgres
 - The master is port forwarded to 5432. 
 - Workers are port fowarded to 5433,5434,5435,5436
 - You should be able to connect with: Usr:docker pwd:docker
